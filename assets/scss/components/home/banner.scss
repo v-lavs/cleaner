@@ -1,0 +1,32 @@
+.section-banner {
+    //position: relative;
+    //top: 151px;
+    .banner-bg {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        //position: relative;
+        height: 450px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+    .container {
+        padding: 0 23px;
+        display: flex;
+        align-items: center;
+    }
+    .content-banner {
+        width: 100%;
+        max-width: 733px;
+    }
+    .banner-slogan {
+        margin-bottom: 64px;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.89);
+    }
+    .wrap-button {
+        text-align: center;
+    }
+}

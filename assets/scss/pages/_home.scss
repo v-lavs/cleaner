@@ -1,0 +1,59 @@
+@import '../components/home/banner';
+@import '../components/home/service';
+@import '../components/home/works';
+@import '../components/home/testimonials';
+
+.title-section {
+    text-align: center;
+    color: $primary;
+}
+
+.wrap-btn-width {
+    width: 90%;
+    @include respond-to($lg) {
+        width: 32%;
+    }
+}
+
+.cleaner {
+    background: $primary;
+    padding: 50px 0 37px;
+    color: $white;
+    .container {
+        text-align: center;
+    }
+    .text-aside {
+        width: 100%;
+        max-width: 956px;
+        margin: 0 auto 32px;
+    }
+    .wrap-btn {
+        margin: 0 auto;
+    }
+}
+
+.aside-jobs {
+    background: $primary;
+    padding: 34px 0;
+    .container {
+        text-align: center;
+        @include respond-to($lg) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p {
+            margin-bottom: 15px;
+            @include respond-to($lg) {
+                margin: 0 0 0 48px;
+            }
+        }
+    }
+    .wrap-btn {
+        margin: 0 auto;
+        @include respond-to($lg) {
+            margin: 0 75px 0 0;
+        }
+    }
+}
+

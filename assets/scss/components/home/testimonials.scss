@@ -1,0 +1,30 @@
+.section-testimonials {
+    padding: 69px 0 64px;
+    .title-section {
+        margin-bottom: 44px;
+    }
+    .content-box {
+        width: 100%;
+        max-width: 834px;
+        margin: 0 auto;
+    }
+    .card-testimonial {
+         background: $gray-200;
+         padding: 19px 22px;
+     }
+    .author-blockquote {
+        margin: 0;
+    }
+    .testimonial-item {
+        margin-bottom: 30px;
+    }
+    .link-blockquote {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        transition: .35s;
+        &:hover {
+            color: $primary;
+        }
+    }
+}

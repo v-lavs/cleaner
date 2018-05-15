@@ -1,0 +1,26 @@
+.section-works {
+    background: $gray-200;
+    padding: 51px 0;
+    .title-section {
+        margin-bottom: 32px;
+    }
+    .card-work {
+         background: $gray-200;
+         .container-bg-work {
+             margin: 0 auto;
+             position: relative;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size: contain;
+             width: 134px;
+             height: 73px;
+         }
+         .card-title {
+             margin-bottom: 6px;
+         }
+         .card-content {
+             padding: 5px 42px;
+             text-align: center;
+         }
+     }
+}

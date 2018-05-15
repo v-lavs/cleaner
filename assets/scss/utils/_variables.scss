@@ -1,0 +1,77 @@
+/*
+* Grid
+*/
+
+$container-max-widths: (
+        xl: 1240px
+);
+
+/*
+* Breakpoints
+*/
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1240px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+
+$xs: '(max-width: 0px)';
+$sm: '(min-width: 576px)';
+$md: '(min-width: 768px)';
+$lg: '(min-width: 992px)';
+$xl: '(min-width: 1240px)';
+
+/*
+* Colors
+*/
+
+$primary: #00adef;
+$success: #8cc63f;
+$secondary:#7d7d7d;
+$gray-600:#8e8e8e;
+$gray-900: #555555;
+$dark: #252525;
+$white: #ffffff;
+$gray-200: #f3f2f2;
+$gray-300: #d7d7d7;
+
+/*
+* Btn
+*/
+
+$border-radius: 10px;
+$border-radius-lg: 10px;
+$border-radius-md: 10px;
+$btn-font-weight: 600;
+$btn-padding-y-lg: 10px;
+$btn-padding-x-lg: 46px;
+
+/*
+* Card
+*/
+$card-border-width: 0;
+$card-border-radius: 0;
+
+ /*
+* fonts
+*/
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+/*
+* blockquote
+*/
+
+$blockquote-font-size: 14px;
+
+
+
