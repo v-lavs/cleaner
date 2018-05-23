@@ -9,9 +9,24 @@
 }
 
 .wrap-btn-width {
-    width: 90%;
+    width: 74%;
+    @include respond-to($sm) {
+        width: 70%;
+    }
+    @include respond-to($md) {
+        width: 52%;
+    }
     @include respond-to($lg) {
-        width: 32%;
+        width: 39%;
+    }
+    @include respond-to($xl) {
+        width: 32.5%;
+    }
+    .btn-aside {
+        font-size: 16px;
+        @include respond-to($sm) {
+            font-size: 20px;
+        }
     }
 }
 
@@ -30,6 +45,7 @@
     .wrap-btn {
         margin: 0 auto;
     }
+
 }
 
 .aside-jobs {
@@ -49,11 +65,10 @@
             }
         }
     }
-    .wrap-btn {
+    .wrap-btn-width {
         margin: 0 auto;
         @include respond-to($lg) {
             margin: 0 75px 0 0;
         }
     }
 }
-

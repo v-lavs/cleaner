@@ -1,14 +1,25 @@
+body {
+    font: 16px $font-family-sans-serif;
+}
+
 .banner-slogan {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.33;
     letter-spacing: normal;
+    @include respond-to($lg) {
+        font-size: 36px;
+    }
 }
 
 .title-section {
-    font-size: 30px;
+    font-size: 22px;
+    @include respond-to($sm) {
+        font-size: 30px;
+    }
+
 }
 
 .card-title {
@@ -19,54 +30,53 @@
     line-height: 1.8;
     letter-spacing: normal;
 }
-.card,
-.text-sm {
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-}
 
-.text-md {
-    font-size: 20px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-}
+.text {
+    &-xs {
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+    }
+    &-sm {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.29;
+        letter-spacing: normal;
+    }
 
-.text-xs {
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: normal;
-}
+    &-md {
+        font-size: 17px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        @include respond-to($sm) {
+            font-size: 20px;
+        }
+    }
+    &-lg {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+    &-xl {
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+    &-weight-md {
+        font-weight: 600;
+    }
 
-.author-blockquote {
-    line-height: 1.5;
-}
-
-.title-widget {
-    line-height: 1.71;
-}
-.subtitle-section {
-    font-weight: 600;
-}
-
-.lh-widget {
-    line-height: 2;
-}
-
-.title-rewiews {
-    line-height: 1.8;
-}
-.title-review-item {
-    font-weight: 600;
-}
-.title-sidebar-item {
-    font-weight: 600;
 }

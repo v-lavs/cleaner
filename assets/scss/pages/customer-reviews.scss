@@ -1,19 +1,18 @@
 .section-customer-reviews {
     background: $gray-200;
     padding: 32px 0 41px;
-    .content-box {
-        width: 100%;
-        max-width: 812px;
-        margin: 0 auto;
-    }
     .heading-reviews {
         background: $white;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 25px 30px 23px;
+        padding: 25px 30px 15px;
         margin-bottom: 30px;
-        -ms-text-align-last: right;
-        text-align: left;
+        text-align: center;
+        @include respond-to($sm) {
+            flex-direction: row;
+            text-align: left;
+        }
     }
     .subtitle-section {
         font-weight: 600;
@@ -23,16 +22,21 @@
         color: $gray-600;
     }
     .name-member {
-        text-align: left;
+        text-align: center;
+        @include respond-to($sm) {
+            text-align: left;
+        }
     }
-    img {
-        display: block;
-        max-width: 80px;
-        height: auto;
-        width: 100%;
-        margin-right: 23px;
+    .wrap-img-member {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+        @include respond-to($sm) {
+            width: 80px;
+            height: 80px;
+            margin-right: 23px;
+        }
     }
-
     .about-me {
         background: $white;
         display: flex;
@@ -41,34 +45,90 @@
     .myself {
         width: 100%;
         max-width: 605px;
-        padding: 23px 30px;
+        padding: 14px 30px 8px;
+        text-align: center;
+        @include respond-to($sm) {
+            text-align: left;
+            padding: 14px 30px 20px;
+        }
+    }
+    .marks-list {
+        width: 100%;
+        max-width: 377px;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include respond-to($sm) {
+            margin: 0;
+        }
+    }
+    .mark-item {
+        text-align: center;
+        flex-basis: 88px;
+        flex-grow: 1;
+    }
+    .wrap-img-mark {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+    }
+    img {
+        display: block;
+        vertical-align: middle;
+        width: 100%;
     }
     .sidebar {
         width: 100%;
         max-width: 207px;
-        padding: 34px 30px;
+        padding: 10px 30px 34px;
         font-weight: 600;
+        margin: 0 auto;
+        text-align: center;
+        @include respond-to($sm) {
+            text-align: left;
+            padding-top: 27px;
+        }
         p {
             color: $gray-600;
             margin: 0;
         }
     }
+
+    .heading {
+        position: relative;
+        svg {
+            position: absolute;
+            right: 0;
+            top: 8px;
+            @include respond-to($sm) {
+                top: 14px;
+            }
+            @include respond-to($lg) {
+                top: 17px;
+            }
+        }
+    }
+
     .title-rewiews {
         color: $primary;
         margin-bottom: 8px;
     }
+
     .title-sidebar-item {
         margin: 0;
     }
+
     .feature-item {
         margin-bottom: 21px;
         &:last-child {
             margin-bottom: 0;
         }
     }
+
     .rate {
         margin-bottom: 28px;
     }
+
     .text-about-me {
         margin-bottom: 38px;
     }
@@ -79,6 +139,7 @@
         margin-bottom: 30px;
         text-align: center;
     }
+
     .wrap-btn {
         width: 54%;
         margin: 0 auto;
@@ -88,131 +149,91 @@
         background: $white;
         padding: 16px 30px 0;
     }
+
+    .title-reviews {
+        line-height: 1.8;
+    }
+
     .review-item {
         display: flex;
         flex-wrap: wrap;
         border-top: solid 0.5px $gray-300;
         padding: 20px 0 8px;
     }
+
     .title-review-item {
         color: $primary;
     }
+
     .text-review {
         color: $dark;
         margin-bottom: 8px;
     }
+
     .author,
     .date {
         color: $gray-600;
+        clear: both;
     }
     .rating-bar {
-        width: 40%;
-        max-width: 352px;
-        text-align: right;
-    }
-    .content-text {
-        width: 60%;
-        max-width: 460px;
+        text-align: left;
+        @include respond-to($sm) {
+            text-align: right;
+        }
+        .rating-list {
+            float: left;
+            margin-bottom: 6px;
+            @include respond-to($sm) {
+                float: right;
+            }
+        }
+        .rating-star {
+            float: right;
+            font-size: 15px;
+            margin-left: 3px;
+            color: $primary;
+        }
     }
 }
-//============rating==================
-.ratingHolder {
-    width: 80px;
-    position: relative;
-    .passiveRatingHolder {
-        position: relative;
-        width: 80px;
-        height: 14px;
+
+//============rating=================
+.rating {
+    border: none;
+    max-width: 85px;
+    height: 14px;
+    margin: 0 auto;
+    @include respond-to($sm) {
+        margin: 0;
+    }
+    > input {
+        display: none;
+    }
+    > label:before {
+        margin: 0 3px 0 0;
+        font-size: 15px;
+        font-family: FontAwesome;
         display: block;
-        > div {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 14px;
-            background-image: url(../../img/star.svg);
-            background-repeat: no-repeat;
-            background-size: 80px;
-        }
-        .ratingBg {
-            background-position: 0 0;
-            width: 80px;
-            z-index: 1;
-        }
-        .ratingMask {
-            background-position: 0 -37px;
-            z-index: 99;
-        }
+        content: "\f005";
     }
-    .userRatingHolder {
-        opacity: 0;
-        transition: .1s;
-    }
-    &:hover .userRatingHolder,
-    .ratingHolder.voted .userRatingHolder {
-        opacity: 1;
-        transition: .1s;
-    }
-    .userRating {
+    > .half:before {
+        content: "\f089";
         position: absolute;
-        top: -10px;
-        left: 0;
-        padding: 10px 16px;
-        cursor: pointer;
-        z-index: 9999;
-        background-color: #ffffff;
-        border-radius: 5px;
-        width: 80px;
-        height: 14px;
     }
-    .vote {
-        transition: .2s;
-        position: absolute;
-        top: 0;
-        left: 0;
-               cursor: pointer;
-        z-index: 99999;
-        width: 14px;
-        height: 14px;
-        background-image: url("../../img/star.svg");
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 80px;
-        &:hover,
-        .ratingHolder.voted .vote.active {
-            transition: .2s;
-            background-position: 0 38px;
-        }
-        &:hover ~ .vote,
-        .vote.active ~ .vote {
-            transition: .2s;
-            background-position: 5px -17px;
-        }
+    > label {
+        color: #f2f6fc;
+        float: right;
     }
-    .votingHolder {
-        direction: rtl;
-        position: relative
-    }
-
-    .vote.onestar {
-        left: 80%;
-    }
-    .vote.twostar {
-        left: 60%;
-    }
-    .vote.threestar {
-        left: 40%;
-    }
-    .vote.fourstar {
-        left: 20%;
-    }
-    .vote.fivestar {
-        left: 0;
+    > input:checked ~ label,
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label,
+    > input:checked + label:hover,
+    > input:checked ~ label:hover,
+    > label:hover ~ input:checked ~ label,
+    > input:checked ~ label:hover ~ label {
+        color: $primary;
     }
 }
 
-.ratingHolder.voted .vote {
-    pointer-events: none;
-}
-.ratingHolder.voted .vote:hover {background-position: 0 0;}
-.ratingHolder.voted .vote.active ~ .vote {background-position: 0 -37px;}
-.ratingHolder.voted .vote.active:hover {background-position: 0 -81px;}
+
+
+

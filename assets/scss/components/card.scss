@@ -1,0 +1,23 @@
+.card {
+    &-membership {
+        margin: 0 2px;
+        border-radius: 10px;
+        }
+    &-text {
+        background: $gray-200;
+        padding: 17px 17px 19px;
+        text-align: center;
+        color: $dark;
+        p {
+            margin-bottom: 6px;
+        }
+    }
+    &-header {
+        padding: 31px 0;
+        text-align: center;
+        color: $white;
+        .text-lg {
+            line-height: 0.9;
+        }
+    }
+}

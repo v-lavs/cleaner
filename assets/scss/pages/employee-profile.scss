@@ -1,0 +1,324 @@
+.section {
+    background: $gray-200;
+    &-employee-profile {
+        padding: 30px 0;
+        .upload-photo {
+            padding: 37px 30px 28px;
+            text-align: center;
+            margin: 0 auto 30px;
+            max-width: 333px;
+            color: $gray-800;
+        }
+        .photo-wrap {
+            width: 114px;
+            height: 111px;
+            margin-bottom: 30px;
+        }
+        .btn-wrap {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include respond-to($lg) {
+                flex-direction: row;
+            }
+            .btn {
+                border: solid 1px $gray-500;
+                font-size: 14px;
+                text-transform: none;
+                min-width: 115px;
+                padding: 1px 11px 1px;
+                text-align: center;
+                @include respond-to($lg) {
+                    margin-left: 7px;
+                }
+            }
+        }
+        .photo-info {
+            display: none;
+            padding-top: 10px;
+            overflow: hidden;
+            .text {
+                margin-bottom: 15px;
+            }
+        }
+        .label-upload {
+            display: block;
+            cursor: pointer;
+            border: solid 1px $gray-500;
+            border-radius: 10px;
+            background: $gray-200;
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.28);
+            font-size: 14px;
+            color: $gray-700;
+            min-width: 115px;
+            margin-bottom: 10px;
+            padding: 3px 11px 2px;
+            text-align: center;
+            transition: .35s;
+            tabindex:0;
+            &:focus {
+                border-color: #70d7ff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 173, 239, 0.25);
+            }
+            @include respond-to($lg) {
+                margin-bottom: 0;
+                           }
+        }
+        input[type='file']{
+            display: none;
+        }
+        .profile-completion {
+            text-align: center;
+            color: $gray-800;
+            padding: 27px 24px 28px 28px;
+            margin-bottom: 30px;
+            @include respond-to($sm) {
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+
+        .contact-form {
+            padding: 19px 30px 9px 20px;
+        }
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $gray-500;
+        }
+
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $gray-500;
+        }
+
+        :-ms-input-placeholder { /* IE 10+ */
+            color: $gray-500;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+            color: $gray-500;
+        }
+        .clear-type {
+            background: url(../../img/down.png) no-repeat transparent;
+            background-position: 96% 50%;
+            padding:0 24px 0 14px;
+            color: $gray-500;
+            font-size: 14px;
+            position: relative;
+            display: inline-block;
+            appearance: none!important;
+        }
+        .input {
+            font-size: 14px;
+            color: $gray-800;
+            padding-left: 14px;
+            &.error {
+                border: 1px solid $danger;
+                box-shadow:  0 0 0 0.2rem rgba(221, 58, 77, 0.25) ;
+            }
+        }
+        label.error {
+            margin-top: 5px;
+            font-size: 12px;
+            color: $danger;
+            position: relative;
+            left: 0;
+            @include respond-to($sm) {
+                left: 33%;
+            }
+        }
+        .description {
+            position: relative;
+            resize: none;
+            font-size: 14px;
+            padding: 5px 14px;
+        }
+        .btn-popover {
+            position: absolute;
+            right: 47px;
+            bottom: 223px;
+            background: transparent;
+            box-shadow: none;
+            @include respond-to($sm) {
+                bottom: 255px;
+            }
+            @include respond-to($md) {
+                bottom: 213px;
+            }
+            @include respond-to($lg) {
+                bottom: 179px;
+            }
+            span {
+                display: block;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $gray-700;
+                border-radius: 50%;
+                color: $gray-500;
+                z-index: 1;
+            }
+            .fa {
+                font-size: 11px;
+                vertical-align: text-top;
+                line-height: 1.2;
+            }
+        }
+        .form-check-inline {
+            margin-bottom: 7px;
+        }
+        .additional-info {
+            width: 100%;
+            padding: 25px 30px;
+        }
+        .additional-item {
+            margin-bottom: 10px;
+        }
+        .additional-item-big {
+            @include respond-to($sm) {
+                padding-left: 20px;
+            }
+        }
+        input[type=checkbox] {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        input[type=checkbox] + label:before {
+            content: "\2714";
+            color: transparent;
+            display: inline-block;
+            border: 1px solid $gray-500;
+            font-size: 12px;
+            line-height: 1;
+            height: 12px;
+            width: 12px;
+            text-align: center;
+            margin: 0 13px 4px 0;
+            vertical-align: middle;
+            transition: color ease .3s;
+            tabindex:0;
+
+        }
+        input[type=checkbox]:checked + label:before {
+            color: $gray-700;
+        }
+        .form-check-input:focus + .form-check-label:before{
+            border-color: #70d7ff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 173, 239, 0.25);
+        }
+    }
+
+    &-membership {
+        padding: 0 0 30px;
+        line-height: 1.5;
+    }
+    .title-section {
+        margin-bottom: 36px;
+    }
+    .content-membership {
+        background: $white;
+        padding: 37px 29px 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        @include respond-to($lg) {
+            text-align: left;
+        }
+    }
+    .membership-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .membership-item {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 8px;
+    }
+    .card-membership {
+        border-radius: 10px;
+        overflow: hidden;
+        .recommended {
+            padding-top: 36px;
+            padding-bottom: 3px;
+        }
+        .btn-membership {
+            padding: 3px 29px 4px 29px;
+            margin-bottom: 0;
+        }
+    }
+    .price {
+        margin-bottom: 9px;
+    }
+    .raise .price {
+        margin-bottom: 11px;
+    }
+    .raise .btn-membership {
+        margin-bottom: 5px;
+    }
+    .list-group {
+        color: $gray-600;
+    }
+    .list-group-item {
+        position: relative;
+        padding-left: 36px;
+        border: none;
+        &:nth-child(odd) {
+            background: $gray-200;
+        }
+        &:nth-child(even) {
+            background: $gray-400;
+        }
+    }
+    .check:before {
+        position: absolute;
+        display: block;
+        top: 13px;
+        left: 13px;
+        background-color: $success;
+        content: '\2714';
+        color: $gray-300;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.2;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+    }
+    .uncheck {
+        position: relative;
+        span {
+            position: absolute;
+            display: block;
+            font-size: 14px;
+            left: 13px;
+            top: 15px;
+            z-index: 1;
+        }
+    }
+    .wrap-btn-group {
+        padding: 16px 28px 15px;
+        display: flex;
+        justify-content: center;
+        @include respond-to($sm) {
+            justify-content: flex-end;
+        }
+        .btn {
+            font-size: 12px;
+            margin-left: 14px;
+            &:first-child {
+                margin-left: 0;
+            }
+            @include respond-to($sm) {
+                font-size: 16px;
+            }
+        }
+        .btn-profile {
+            min-width: 90px;
+            @include respond-to($sm) {
+                min-width: 119px;
+                padding: 7px 26px 8px 26px;
+            }
+        }
+    }
+}

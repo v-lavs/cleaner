@@ -7,32 +7,60 @@ jQuery(document).ready(function () {
     nav.addClass('open');
   });
 
-  jQuery('.close-main-nav').click(function (e) {
+  jQuery('.btn-close ').click(function (e) {
     e.preventDefault();
     nav.removeClass('open');
   });
 
-//  rating
-  $('.vote').on ('click', function(){
+  jQuery(function(){
+    jQuery('#myForm').validate({
+      submitHandler: function(form) {
+        form.submit();
+      },
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        lastName: {
+          required: true
+        },
+        telephone: {
+          required: true,
+          digits: true
+        },
+        required: true,
+        email: true
+      },
+      focusCleanup: true,
+      focusInvalid: false
+    });
+  });
 
-    $(this).addClass('active');
+  // input file
 
-    var parent = $(this).parent().parent().parent().parent();
-    var commentCountElement = parent.find('.commentscount');
-    var ratingValueElement = parent.find('.ratingvalue');
-    var votedValue = parseInt($(this).attr('data-score'));
+  // var inputPhoto = document.getElementById('filePhoto');
+  // var inputFileLabel = document.querySelector('.label-upload');
+  // var photoInfo = document.querySelector('#photoInfo');
+  // var photoInfoText = document.querySelector('#photoInfo .text');
+  // var resetPhoto = document.getElementById('resetPhoto');
+  //
+  // inputPhoto.addEventListener('change', function (e) {
+  //   var data = e.target.value;
+  //   if(data.trim()) {
+  //     photoInfoText.innerHTML = data;
+  //     inputFileLabel.style.display = 'none';
+  //     photoInfo.style.display = 'block';
+  //   }
+  // });
+  //
+  // resetPhoto.addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   inputPhoto.value = '';
+  //   photoInfoText.innerHTML = '';
+  //   inputFileLabel.style.display = 'block';
+  //   photoInfo.style.display = 'none';
+  // });
 
-    parent.addClass('voted');
 
-    var commentCount = parseInt(commentCountElement.text());
-
-    commentCount = commentCount;
-    commentCountElement.text(commentCount + 1);
-
-    var rating = parseFloat(ratingValueElement.text());
-    rating = (commentCount * rating + votedValue)/(commentCount + 1);
-    ratingValueElement.text(rating.toFixed(2));
-
-    console.log('AJAX запрос примет значение ' + votedValue);
-  })
 });

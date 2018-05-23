@@ -1,25 +1,32 @@
 .header {
-    //position: fixed;
-    //left: 0;
-    //top: 0;
-    //right: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
     background: $white;
-    padding: 25px 0 18px;
+    padding: 5px 0;
     z-index: 1000;
+    @include respond-to($md) {
+        padding: 25px 0 18px;
+    }
     .container {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
     }
-    .title {
+    .logo-wrap {
         flex-shrink: 0;
     }
     .logo-link {
         display: inline-block;
         vertical-align: middle;
-        max-width: 104px;
-        height: 61px;
+        max-width: 64px;
+        height: auto;
+        @include respond-to($sm) {
+            min-width: 104px;
+            height: 61px;
+        }
         @include respond-to($lg) {
             max-width: 144px;
             height: 101px;
@@ -35,9 +42,6 @@
         max-width: 463px;
     }
     .btn-burger {
-        @include respond-to($sm) {
-            order: 3;
-        }
         @include respond-to($lg) {
             display: none;
         }
@@ -49,19 +53,16 @@
     }
     .right-bar {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @include respond-to($sm) {
-            justify-content: flex-end;
-            flex-wrap: nowrap;
-        }
+        align-items: center;
         .btn {
-            margin-bottom: 10px;
+            font-size: 12px;
+            margin-left: 10px;
+            &:last-child{
+                margin-left: 0;
+            }
             @include respond-to($sm) {
+                font-size: 16px;
                 margin: 0 0 0 27px;
-                &:first-child {
-                    margin-left: 0;
-                }
             }
         }
     }

@@ -25,6 +25,7 @@
             padding: 20px 0;
             text-transform: uppercase;
             color: inherit;
+            text-align: left;
             &:hover {
                 color: $success;
                 text-decoration: none;
@@ -56,7 +57,7 @@
             }
         }
     }
-    .close-main-nav {
+    .btn-close  {
         margin-bottom: 20px;
         @include respond-to($lg) {
             display: none;

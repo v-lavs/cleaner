@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8"/>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
@@ -7,135 +9,473 @@
     <title>Employee profile</title>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+          integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <!--styles-->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-<header class="header">
-    <div class="container">
+<div class="wrap">
+    <header class="header">
+        <div class="container">
+            <h1 class="logo-wrap">
+                <a href="#" class="logo-link">
+                    <img src="img/logo-site.png" alt="Finda Cleaner" class="logo-site">
+                </a>
+            </h1>
+            <nav class="menu-header">
+                <div class="main-nav-wrap">
+                    <button class="btn-close btn"><i class="oi oi-circle-x"></i></button>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#">how it works</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">contact</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">faq</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="right-bar">
+                <a href="#" class="btn btn-primary  btn-login btn-right-bar">Login</a>
+                <a href="#" class="btn btn-jobs text-white btn-success btn-right-bar">Cleaning jobs</a>
+                <button class="btn btn-burger btn-right-bar">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-        <h1 class="title">
-            <a href="#" class="logo-link">
-                <img src="img/logo-site.png" alt="Finda Cleaner" class="logo-site">
-            </a>
-        </h1>
-        <nav class="menu-header">
-            <div class="main-nav-wrap">
-                <button class="close-main-nav text-white btn btn-success"><i class="fa fa-times"></i></button>
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="#">how it works</a>
+    <section class="section section-employee-profile text-sm">
+        <div class="container">
+            <div class="content-box">
+                <form action="/" method="post" enctype="multipart/form-data" id="myForm">
+                    <div class="row mb-4">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="upload-photo bg-white">
+                                <div class="photo-wrap mx-auto">
+                                    <img src="img/upload-mask.jpg" alt="photo" class="img-default d-block">
+                                </div>
+                                <div class="btn-wrap">
+                                    <label for="filePhoto" class="label-upload text-sm text-weight-md" tabindex="0">Upload
+                                        Photo
+                                        <input type="file" name="photo" accept="image/jpeg" id="filePhoto">
+                                    </label>
+                                    <button type="button" class="btn btn-take-photo btn-outline-gray-700 text-sm">Take
+                                        Photo
+                                    </button>
+                                </div>
+                                <p>(Maximum file size 100mb)</p>
+                            </div>
+                            <div class="profile-completion bg-white">
+                                <p class="text-dark text-weight-md mb-4">Profile Completion - <span
+                                        class="text-primary text-weight-md">10%</span></p>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar" style="width: 10%"
+                                         aria-valuenow="10%"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <p class="text-center text-gray-800">Fully completed profiles are 50% more likely to
+                                    score jobs.</p>
+                            </div>
+                        </div>
+                        <div class=" col-sx-12 col-sm-7">
+                            <div class="contact-form bg-white">
+                                <div class="form-list">
+                                    <div class="form-group row  no-gutters">
+                                        <label for="name" class="col-sm-4 col-form-label text-weight-md">First
+                                            Name*</label>
+                                        <input class="input  form-control col-sm-8" type="text" name="name"
+                                               id="name"
+                                               placeholder="Ally"
+                                               required>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="last-name" class="col-sm-4 col-form-label text-weight-md">Last
+                                            Name*</label>
+                                        <input class="input form-control col-sm-8" type="text" name="lastName"
+                                               id="last-name"
+                                               placeholder="Williams" required>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="phone" class="col-sm-4 col-form-label text-weight-md">Mobile
+                                            Phone*</label>
+                                        <input class="input form-control col-sm-8" type="tel" name="telephone"
+                                               placeholder="XXXX XXX XXX"
+                                               id="phone" required>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="email"
+                                               class="col-sm-4 col-form-label text-weight-md">Email*</label>
+                                        <input class="input form-control col-sm-8" type="email" name="email"
+                                               id="email"
+                                               pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                                               placeholder="email@provider.com" required>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="location"
+                                               class="col-sm-4 col-form-label text-weight-md">Location</label>
+                                        <input class="input form-control col-sm-8" type="text" name="location"
+                                               id="location"
+                                               placeholder="Suburb or Postcode">
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="cleaner-type" class="col-sm-4 col-form-label text-weight-md">Cleaner
+                                            Type</label>
+                                        <select name="cleaner-type text-gray-500" id="cleaner-type"
+                                                class="clear-type form-control col-sm-8">
+                                            <option value="cleaner-type">Domestic</option>
+                                            <option value="cleaner-type">Cleaning</option>
+                                            <option value="cleaner-type">Cooking</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="description" class="col-sm-4 col-form-label text-weight-md">Profile
+                                            Description</label>
+                                        <textarea rows="5" cols="45" name="text" id="description"
+                                                  class="description form-control col-sm-8"
+                                                  placeholder="Introduce yourself..."></textarea>
+                                        <button type="button" class="btn btn-popover p-1" role="button"
+                                                data-toggle="popover"
+                                                data-trigger="focus" title="Help" data-content=" How long have you been cleaning?
+                                                    What are your skills or characteristics?
+                                                    What do you like about your work?
+                                                    What type of jobs are you looking for?">
+                                            <span><i class="fa fa-info" aria-hidden="true"></i></span>
+                                        </button>
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="languages" class="col-sm-4 col-form-label text-weight-md">My
+                                            Languages</label>
+                                        <input type="text" class="input form-control col-sm-8" name="languages"
+                                               id="languages"
+                                               placeholder="English">
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <label for="rate" class="col-sm-4 col-form-label text-weight-md">My
+                                            Rate</label>
+                                        <input type="text" name="rate" id="rate" class="input form-control col-sm-8"
+                                               placeholder="30.00">
+                                    </div>
+                                    <div class="form-group row no-gutters">
+                                        <div class="col-sm-8 offset-md-4 ">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input form-control" type="checkbox"
+                                                       name="hourly" value="hourly"
+                                                       id="hourly-checkbox">
+                                                <label class="form-check-label" for="hourly-checkbox">Hourly</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input form-control" type="checkbox"
+                                                       name="negotiable" value="negotiable"
+                                                       id="negotiable-checkbox">
+                                                <label class="form-check-label"
+                                                       for="negotiable-checkbox">Negotiable</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input form-control" type="checkbox"
+                                                       name="flat-rate" id="flat-rate-checkbox">
+                                                <label class="form-check-label" for="flat-rate-checkbox">Flat
+                                                    Rate</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-info  bg-white">
+                        <h5 class="text-sm text-weight-md text-dark">Please Tick the Boxes if:
+                        </h5>
+                        <div class="form-check">
+                            <div class="row">
+                                <div class="additional-item col-xs-12 col-sm-5 p-0">
+                                    <input type="checkbox" name="insurance" id="insurance"
+                                           class="form-check-input form-control"
+                                           value="insurance">
+                                    <label for="insurance" class="form-check-label">You Have
+                                        Insurance</label>
+                                </div>
+                                <div class="additional-item additional-item-big col-xs-12  col-sm-7 p-0">
+                                    <input type="checkbox" name="right-to-work" id="right-to-work"
+                                           class="form-check-input form-control"
+                                           value="right-to-work">
+                                    <label for="right-to-work" class="form-check-label">The Right to
+                                        Work in Australia</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="additional-item col-xs-12  col-sm-5 p-0">
+                                    <input type="checkbox" name="police-check" id="police-check"
+                                           class="form-check-input form-control"
+                                           value="police-check">
+                                    <label for="police-check" class="form-check-label">You Have an
+                                        In Date Police Check</label>
+                                </div>
+                                <div class="additional-item additional-item-big col-xs-12  col-sm-7 p-0">
+                                    <input type="checkbox" name="pets" id="pets"
+                                           class="form-check-input form-control" value="pets">
+                                    <label for="pets" class="form-check-label">Are Happy to Clean
+                                        When There are Pets in the
+                                        House</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-membership">
+        <div class="container">
+            <div class="content-box">
+                <div class="content-membership">
+                    <h2 class="title-section text-uppercase">MEMBERSHIP OPTIONS</h2>
+                    <ul class="membership-list row no-gutters text-xs">
+                        <li class="membership-item col-xs-12 col-sm-6 col-lg-3">
+                            <div class="card card-membership">
+                                <div class="card-header bg-danger">
+                                    <h3 class="text-lg text-uppercase">Silver</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item check">
+                                        Visible Profile
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Access to Job Postings
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Apply for Posted Jobs
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        See Your Profile Views
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Email/Text Alerts
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Appear as a Top Result
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p class="text-lg">$9/mth</p>
+                                    <p class="price"><span class="text-uppercase">FREE</span> 30 Day Trial</p>
+                                    <a href="#" class="btn btn-danger  btn-membership btn-sm">Join Now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="membership-item col-xs-12 col-sm-6 col-lg-3">
+                            <div class="card card-membership">
+                                <div class="card-header bg-warning">
+                                    <h3 class="text-lg text-uppercase">Gold</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item check">
+                                        Visible Profile
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Access to Job Postings
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Apply for Posted Jobs
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        See Your Profile Views
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Email/Text Alerts
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Appear as a Top Result
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p class="text-lg">$19/mth</p>
+                                    <p class="price"><span class="text-uppercase">FREE</span> 30 Day Trial</p>
+                                    <a href="#" class="btn btn-warning btn-membership btn-sm text-white">Join Now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="membership-item col-xs-12 col-sm-6 col-lg-3">
+                            <div class="card card-membership raise">
+                                <div class="card-header bg-primary recommended">
+                                    <h3 class="text-xl text-uppercase mb-0">PLATINUM</h3>
+                                    <p class="subtitle-card">(Recommended)</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item check">
+                                        Visible Profile
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Access to Job Postings
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Apply for Posted Jobs
+                                    </li>
+                                    <li class="list-group-item check">
+                                        See Your Profile Views
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Email/Text Alerts
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Appear as a Top Result
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p class="text-xl">$35/mth</p>
+                                    <p class="price"><span class="text-uppercase">FREE</span> 30 Day Trial</p>
+                                    <a href="#" class="btn btn-primary btn-membership btn-sm ">Join Now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="membership-item col-xs-12 col-sm-6 col-lg-3">
+                            <div class="card card-membership">
+                                <div class="card-header bg-success">
+                                    <h3 class="text-lg text-uppercase">Featured</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item check">
+                                        Visible Profile
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Access to Job Postings
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Apply for Posted Jobs
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        See Your Profile Views
+                                    </li>
+                                    <li class="list-group-item uncheck"><span class="oi oi-circle-x"></span>
+                                        Email/Text Alerts
+                                    </li>
+                                    <li class="list-group-item check">
+                                        Appear as a Top Result
+                                    </li>
+                                </ul>
+                                <div class="card-text">
+                                    <p class="text-lg">$35/mth</p>
+                                    <p class="price"><span class="text-uppercase">FREE</span> 30 Day Trial</p>
+                                    <a href="#" class="btn btn-success btn-membership btn-sm text-white">Join Now</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <h6 class="text-primary text-uppercase text-weight-md mb-0">MONEY BACK GUARANTEE </h6>
+                    <p class="text-sm text-dark">If you are not getting value for your membership we offer a 100%
+                        money-back guarantee.</p>
+                </div>
+                <div class="wrap-btn-group bg-white">
+                    <a href="#" class="btn btn-primary btn-profile">Preview</a>
+                    <button type="submit" class="btn text-white btn-success btn-profile">Save</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-site">
+        <div class="footer-top text-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <h3 class="title-widget text-sm">FIND A CLEANER NOW</h3>
+                        <ul class="find-list lh-widget">
+                            <li class="find-item">
+                                <a href="#" class="link-widget">About Us</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Media</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Tips for Cleaners</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Tips for Customers</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">FAQs</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <h3 class="title-widget text-sm">CATEGORIES</h3>
+                        <ul class="find-list lh-widget">
+                            <li class="find-item">
+                                <a href="#" class="link-widget"> Domestic Cleaning</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Cooking</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Housekeeping</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Window Cleaning</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Oven Cleaning</a>
+                            </li>
+                            <li class="find-item">
+                                <a href="#" class="link-widget">Carpet Cleaning</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <i class="fa fa-facebook"></i>
+                        </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#">contact</a>
+
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#">faq</a>
+
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <i class="fa fa-twitter"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
-        </nav>
-        <div class="right-bar">
-            <a href="#" class="btn btn-primary  btn-login">Login</a>
-            <button class="btn btn-burger btn-primary">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-            <a href="#" class="btn btn-jobs text-white btn-success">Cleaning jobs</a>
-
         </div>
-    </div>
-</header>
-<section class="section-employee-profile">
 
-</section>
-<footer class="footer-site">
-    <div class="footer-top text-xs">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <h3 class="title-widget text-sm">FIND A CLEANER NOW</h3>
-                    <ul class="find-list lh-widget">
-                        <li class="find-item">
-                            <a href="#" class="link-widget">About Us</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Media</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Tips for Cleaners</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Tips for Customers</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">FAQs</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Contact Us</a>
-                        </li>
-                    </ul>
+        <div class="footer-bottom text-xs">
+            <div class="container">
+                <div class="info-copyright">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
                 </div>
-
-                <div class="col-xs-12 col-sm-6">
-                    <h3 class="title-widget text-sm">CATEGORIES</h3>
-                    <ul class="find-list lh-widget">
-                        <li class="find-item">
-                            <a href="#" class="link-widget"> Domestic Cleaning</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Cooking</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Housekeeping</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Window Cleaning</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Oven Cleaning</a>
-                        </li>
-                        <li class="find-item">
-                            <a href="#" class="link-widget">Carpet Cleaning</a>
-                        </li>
-                    </ul>
+                <div>
+                    <p class="copyright">© 2018 Find A Cleaner Now</p>
                 </div>
             </div>
-            <ul class="social-list">
-                <li class="social-item">
-                    <a href="#" class="social-link">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-
-                <li class="social-item">
-                    <a href="#" class="social-link">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
-
-                <li class="social-item">
-                    <a href="#" class="social-link">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
-    </div>
-
-    <div class="footer-bottom text-xs">
-        <div class="container">
-            <div class="info-copyright">
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-            <div>
-                <p class="copyright">© 2018 Find A Cleaner Now</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
 <script src="assets/js/source-js/main.js"></script>
 </body>
 </html>

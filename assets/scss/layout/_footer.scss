@@ -10,6 +10,13 @@
         .container {
             border-bottom: 1px solid $gray-600;
         }
+        .title-widget {
+            line-height: 1.71;
+        }
+
+        .find-list {
+            line-height: 2;
+        }
         .link-widget {
             display: block;
             color: inherit;
@@ -32,12 +39,9 @@
             }
             a {
                 display: block;
-                width: 24px;
-                height: 24px;
-                border: 2px solid $gray-600;
                 text-align: center;
                 line-height: 2;
-                border-radius: 50%;
+
                 color: inherit;
                 &:hover {
                     color: lighten($gray-600, 20%);
@@ -47,12 +51,22 @@
                 font: normal normal normal 15px/1 FontAwesome;
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
+                vertical-align: text-top;
+                line-height: 0.8;
             }
         }
         .social-item {
+            width: 24px;
+            height: 24px;
+            border: 2px solid $gray-600;
+            border-radius: 50%;
             margin-left: 10px;
             &:first-child {
                 margin-left: 0;
+            }
+            &:hover,
+            &:focus {
+                border-color:  lighten($gray-600, 20%);
             }
         }
     }

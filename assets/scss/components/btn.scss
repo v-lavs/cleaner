@@ -2,11 +2,15 @@
     text-transform: uppercase;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.28);
     padding: 8px 19px 6px 18px;
-    &-banner {
-        padding: 10px 46px;
-        font-size: 20px;
+    &-burger,
+    &-close {
+        background: transparent;
+        box-shadow: none;
+        color: $gray-600;
     }
-    //.contact-btn {
-    //    padding: 7px 181px;
-    //}
+    &-upload,
+    &-take-photo {
+        background-color: $gray-200;
+        color: $gray-700;
+    }
 }
