@@ -6874,17 +6874,24 @@ a.text-dark:hover, a.text-dark:focus {
         padding: 14px 30px 20px; } }
   .section-customer-reviews .marks-list {
     width: 100%;
-    max-width: 377px;
+    max-width: 407px;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap; }
     @media only screen and (min-width: 576px) {
       .section-customer-reviews .marks-list {
+        justify-content: flex-start;
         margin: 0; } }
   .section-customer-reviews .mark-item {
     text-align: center;
-    flex-basis: 88px;
-    flex-grow: 1; }
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    flex-basis: 88px; }
+    @media only screen and (min-width: 576px) {
+      .section-customer-reviews .mark-item {
+        flex-grow: 0;
+        flex-basis: auto;
+        margin: 0 20px 0 0; } }
   .section-customer-reviews .wrap-img-mark {
     width: 60px;
     height: 60px;
@@ -6895,7 +6902,6 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%; }
   .section-customer-reviews .sidebar {
     width: 100%;
-    max-width: 207px;
     padding: 10px 30px 34px;
     font-weight: 600;
     margin: 0 auto;
@@ -6924,6 +6930,14 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 8px; }
   .section-customer-reviews .title-sidebar-item {
     margin: 0; }
+  @media only screen and (min-width: 576px) {
+    .section-customer-reviews .features-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  @media only screen and (min-width: 768px) {
+    .section-customer-reviews .features-list {
+      display: block; } }
   .section-customer-reviews .feature-item {
     margin-bottom: 21px; }
     .section-customer-reviews .feature-item:last-child {
@@ -7060,8 +7074,7 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: 10px;
       padding: 3px 11px 2px;
       text-align: center;
-      transition: .35s;
-      tabindex: 0; }
+      transition: .35s; }
       .section-employee-profile .label-upload:focus {
         border-color: #70d7ff;
         box-shadow: 0 0 0 0.2rem rgba(0, 173, 239, 0.25); }
@@ -7080,7 +7093,11 @@ a.text-dark:hover, a.text-dark:focus {
           text-align: left;
           margin-bottom: 0; } }
     .section-employee-profile .contact-form {
-      padding: 19px 30px 9px 20px; }
+      padding: 19px 30px 9px 20px;
+      text-align: left;
+      min-height: 100%; }
+      .section-employee-profile .contact-form .relative {
+        position: relative; }
     .section-employee-profile ::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #c7c7c7; }
@@ -7125,19 +7142,10 @@ a.text-dark:hover, a.text-dark:focus {
       padding: 5px 14px; }
     .section-employee-profile .btn-popover {
       position: absolute;
-      right: 47px;
-      bottom: 223px;
+      right: 7px;
+      bottom: 7px;
       background: transparent;
       box-shadow: none; }
-      @media only screen and (min-width: 576px) {
-        .section-employee-profile .btn-popover {
-          bottom: 255px; } }
-      @media only screen and (min-width: 768px) {
-        .section-employee-profile .btn-popover {
-          bottom: 213px; } }
-      @media only screen and (min-width: 992px) {
-        .section-employee-profile .btn-popover {
-          bottom: 179px; } }
       .section-employee-profile .btn-popover span {
         display: block;
         width: 16px;
@@ -7154,6 +7162,7 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: 7px; }
     .section-employee-profile .additional-info {
       width: 100%;
+      text-align: left;
       padding: 25px 30px; }
     .section-employee-profile .additional-item {
       margin-bottom: 10px; }
@@ -7176,8 +7185,7 @@ a.text-dark:hover, a.text-dark:focus {
       text-align: center;
       margin: 0 13px 4px 0;
       vertical-align: middle;
-      transition: color ease .3s;
-      tabindex: 0; }
+      transition: color ease .3s; }
     .section-employee-profile input[type=checkbox]:checked + label:before {
       color: #717171; }
     .section-employee-profile .form-check-input:focus + .form-check-label:before {

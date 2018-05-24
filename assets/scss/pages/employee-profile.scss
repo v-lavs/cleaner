@@ -58,16 +58,15 @@
             padding: 3px 11px 2px;
             text-align: center;
             transition: .35s;
-            tabindex:0;
             &:focus {
                 border-color: #70d7ff;
                 box-shadow: 0 0 0 0.2rem rgba(0, 173, 239, 0.25);
             }
             @include respond-to($lg) {
                 margin-bottom: 0;
-                           }
+            }
         }
-        input[type='file']{
+        input[type='file'] {
             display: none;
         }
         .profile-completion {
@@ -83,6 +82,11 @@
 
         .contact-form {
             padding: 19px 30px 9px 20px;
+            text-align: left;
+            min-height: 100%;
+            .relative {
+                position: relative;
+            }
         }
         ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: $gray-500;
@@ -102,12 +106,12 @@
         .clear-type {
             background: url(../../img/down.png) no-repeat transparent;
             background-position: 96% 50%;
-            padding:0 24px 0 14px;
+            padding: 0 24px 0 14px;
             color: $gray-500;
             font-size: 14px;
             position: relative;
             display: inline-block;
-            appearance: none!important;
+            appearance: none !important;
         }
         .input {
             font-size: 14px;
@@ -115,7 +119,7 @@
             padding-left: 14px;
             &.error {
                 border: 1px solid $danger;
-                box-shadow:  0 0 0 0.2rem rgba(221, 58, 77, 0.25) ;
+                box-shadow: 0 0 0 0.2rem rgba(221, 58, 77, 0.25);
             }
         }
         label.error {
@@ -136,19 +140,10 @@
         }
         .btn-popover {
             position: absolute;
-            right: 47px;
-            bottom: 223px;
+            right: 7px;
+            bottom: 7px;
             background: transparent;
             box-shadow: none;
-            @include respond-to($sm) {
-                bottom: 255px;
-            }
-            @include respond-to($md) {
-                bottom: 213px;
-            }
-            @include respond-to($lg) {
-                bottom: 179px;
-            }
             span {
                 display: block;
                 width: 16px;
@@ -169,6 +164,7 @@
         }
         .additional-info {
             width: 100%;
+            text-align: left;
             padding: 25px 30px;
         }
         .additional-item {
@@ -197,13 +193,11 @@
             margin: 0 13px 4px 0;
             vertical-align: middle;
             transition: color ease .3s;
-            tabindex:0;
-
         }
         input[type=checkbox]:checked + label:before {
             color: $gray-700;
         }
-        .form-check-input:focus + .form-check-label:before{
+        .form-check-input:focus + .form-check-label:before {
             border-color: #70d7ff;
             box-shadow: 0 0 0 0.2rem rgba(0, 173, 239, 0.25);
         }

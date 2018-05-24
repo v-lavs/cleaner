@@ -54,32 +54,42 @@
     }
     .marks-list {
         width: 100%;
-        max-width: 377px;
+        max-width: 407px;
         margin: 0 auto;
         justify-content: space-between;
         flex-wrap: wrap;
         @include respond-to($sm) {
+            justify-content: flex-start;
             margin: 0;
         }
     }
     .mark-item {
         text-align: center;
-        flex-basis: 88px;
+        margin: 0 0 20px 0;
         flex-grow: 1;
+        flex-basis: 88px;
+        @include respond-to($sm) {
+            flex-grow: 0;
+            flex-basis: auto;
+            margin: 0 20px 0 0;
+        }
     }
+
     .wrap-img-mark {
         width: 60px;
         height: 60px;
         margin: 0 auto 10px;
     }
+
     img {
         display: block;
         vertical-align: middle;
         width: 100%;
     }
+
     .sidebar {
         width: 100%;
-        max-width: 207px;
+        //max-width: 207px;
         padding: 10px 30px 34px;
         font-weight: 600;
         margin: 0 auto;
@@ -116,6 +126,16 @@
 
     .title-sidebar-item {
         margin: 0;
+    }
+    .features-list {
+        @include respond-to($sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include respond-to($md) {
+            display: block;
+        }
     }
 
     .feature-item {
@@ -175,6 +195,7 @@
         color: $gray-600;
         clear: both;
     }
+
     .rating-bar {
         text-align: left;
         @include respond-to($sm) {

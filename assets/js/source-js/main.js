@@ -12,55 +12,43 @@ jQuery(document).ready(function () {
     nav.removeClass('open');
   });
 
-  jQuery(function(){
-    jQuery('#myForm').validate({
-      submitHandler: function(form) {
-        form.submit();
-      },
-      rules: {
-        name: {
-          required: true,
-          minlength: 2
-        },
-        lastName: {
-          required: true
-        },
-        telephone: {
-          required: true,
-          digits: true
-        },
+  jQuery('#profileForm').validate({
+    submitHandler: function (form) {
+      form.submit();
+    },
+    rules: {
+      name: {
         required: true,
-        email: true
+        minlength: 2
       },
-      focusCleanup: true,
-      focusInvalid: false
-    });
+      lastName: {
+        required: true
+      },
+      telephone: {
+        required: true,
+        digits: true
+      },
+      required: true,
+      email: true
+    },
+    focusCleanup: true,
+    focusInvalid: true
   });
 
-  // input file
+  jQuery('#filePhoto').change(function (e) {
+    for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
 
-  // var inputPhoto = document.getElementById('filePhoto');
-  // var inputFileLabel = document.querySelector('.label-upload');
-  // var photoInfo = document.querySelector('#photoInfo');
-  // var photoInfoText = document.querySelector('#photoInfo .text');
-  // var resetPhoto = document.getElementById('resetPhoto');
-  //
-  // inputPhoto.addEventListener('change', function (e) {
-  //   var data = e.target.value;
-  //   if(data.trim()) {
-  //     photoInfoText.innerHTML = data;
-  //     inputFileLabel.style.display = 'none';
-  //     photoInfo.style.display = 'block';
-  //   }
-  // });
-  //
-  // resetPhoto.addEventListener('click', function(e) {
-  //   e.preventDefault();
-  //   inputPhoto.value = '';
-  //   photoInfoText.innerHTML = '';
-  //   inputFileLabel.style.display = 'block';
-  //   photoInfo.style.display = 'none';
-  // });
+      var file = e.originalEvent.srcElement.files[i];
 
-
+      var img = document.createElement('img');
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        img.src = reader.result;
+        jQuery(img).addClass('img-default img-fluid');
+      };
+      reader.readAsDataURL(file);
+      jQuery('.img-default').remove();
+      jQuery('.photo-wrap').append(img);
+    }
+  });
 });

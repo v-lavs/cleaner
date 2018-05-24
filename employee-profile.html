@@ -54,7 +54,7 @@
     <section class="section section-employee-profile text-sm">
         <div class="container">
             <div class="content-box">
-                <form action="/" method="post" enctype="multipart/form-data" id="myForm">
+                <form action="/" method="post" enctype="multipart/form-data" id="profileForm">
                     <div class="row mb-4">
                         <div class="col-xs-12 col-sm-5">
                             <div class="upload-photo bg-white">
@@ -64,7 +64,7 @@
                                 <div class="btn-wrap">
                                     <label for="filePhoto" class="label-upload text-sm text-weight-md" tabindex="0">Upload
                                         Photo
-                                        <input type="file" name="photo" accept="image/jpeg" id="filePhoto">
+                                        <input type="file" name="photo" accept="image/jpeg" id="filePhoto" >
                                     </label>
                                     <button type="button" class="btn btn-take-photo btn-outline-gray-700 text-sm">Take
                                         Photo
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class=" col-sx-12 col-sm-7">
-                            <div class="contact-form bg-white">
+                            <div class="contact-form bg-white mb-0">
                                 <div class="form-list">
                                     <div class="form-group row  no-gutters">
                                         <label for="name" class="col-sm-4 col-form-label text-weight-md">First
@@ -136,7 +136,7 @@
                                             <option value="cleaner-type">Cooking</option>
                                         </select>
                                     </div>
-                                    <div class="form-group row no-gutters">
+                                    <div class="form-group row no-gutters relative">
                                         <label for="description" class="col-sm-4 col-form-label text-weight-md">Profile
                                             Description</label>
                                         <textarea rows="5" cols="45" name="text" id="description"
@@ -197,16 +197,16 @@
                     <div class="additional-info  bg-white">
                         <h5 class="text-sm text-weight-md text-dark">Please Tick the Boxes if:
                         </h5>
-                        <div class="form-check">
+                        <div class="form-check p-0">
                             <div class="row">
-                                <div class="additional-item col-xs-12 col-sm-5 p-0">
+                                <div class="additional-item col-xs-12 col-sm-5 ">
                                     <input type="checkbox" name="insurance" id="insurance"
                                            class="form-check-input form-control"
                                            value="insurance">
                                     <label for="insurance" class="form-check-label">You Have
                                         Insurance</label>
                                 </div>
-                                <div class="additional-item additional-item-big col-xs-12  col-sm-7 p-0">
+                                <div class="additional-item additional-item-big col-xs-12  col-sm-7">
                                     <input type="checkbox" name="right-to-work" id="right-to-work"
                                            class="form-check-input form-control"
                                            value="right-to-work">
@@ -215,14 +215,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="additional-item col-xs-12  col-sm-5 p-0">
+                                <div class="additional-item col-xs-12  col-sm-5 ">
                                     <input type="checkbox" name="police-check" id="police-check"
                                            class="form-check-input form-control"
                                            value="police-check">
                                     <label for="police-check" class="form-check-label">You Have an
                                         In Date Police Check</label>
                                 </div>
-                                <div class="additional-item additional-item-big col-xs-12  col-sm-7 p-0">
+                                <div class="additional-item additional-item-big col-xs-12  col-sm-7">
                                     <input type="checkbox" name="pets" id="pets"
                                            class="form-check-input form-control" value="pets">
                                     <label for="pets" class="form-check-label">Are Happy to Clean
@@ -230,7 +230,6 @@
                                         House</label>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -381,7 +380,7 @@
                 </div>
                 <div class="wrap-btn-group bg-white">
                     <a href="#" class="btn btn-primary btn-profile">Preview</a>
-                    <button type="submit" class="btn text-white btn-success btn-profile">Save</button>
+                    <button type="submit" class="btn text-white btn-success btn-profile" form="profileForm">Save</button>
                 </div>
             </div>
         </div>
