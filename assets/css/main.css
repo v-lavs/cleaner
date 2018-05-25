@@ -7034,7 +7034,11 @@ a.text-dark:hover, a.text-dark:focus {
     .section-employee-profile .photo-wrap {
       width: 114px;
       height: 111px;
+      overflow: hidden;
       margin-bottom: 30px; }
+      .section-employee-profile .photo-wrap img {
+        width: 100%;
+        display: block; }
     .section-employee-profile .btn-wrap {
       margin-bottom: 30px;
       display: flex;

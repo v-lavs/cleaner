@@ -12,7 +12,12 @@
         .photo-wrap {
             width: 114px;
             height: 111px;
+            overflow: hidden;
             margin-bottom: 30px;
+            img {
+                width: 100%;
+                display: block;
+            }
         }
         .btn-wrap {
             margin-bottom: 30px;
