@@ -1,16 +1,16 @@
 jQuery(document).ready(function () {
-  //Mob menu
-  var nav = jQuery('.main-nav-wrap');
+    //Mob menu
+    var nav = jQuery('.main-nav-wrap');
 
-  jQuery('.btn-burger').click(function (e) {
-    e.preventDefault();
-    nav.addClass('open');
-  });
+    jQuery('.btn-burger').click(function (e) {
+      e.preventDefault();
+      nav.addClass('open');
+    });
 
-  jQuery('.btn-close ').click(function (e) {
-    e.preventDefault();
-    nav.removeClass('open');
-  });
+    jQuery('.btn-close ').click(function (e) {
+      e.preventDefault();
+      nav.removeClass('open');
+    });
 
   jQuery('#profileForm').validate({
     submitHandler: function (form) {
