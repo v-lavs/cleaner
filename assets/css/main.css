@@ -6608,7 +6608,6 @@ a.text-dark:hover, a.text-dark:focus {
       .footer-site .footer-top .social-list a {
         display: block;
         text-align: center;
-        line-height: 2;
         color: inherit; }
         .footer-site .footer-top .social-list a:hover {
           color: #c1c1c1; }
@@ -6616,8 +6615,8 @@ a.text-dark:hover, a.text-dark:focus {
         font: normal normal normal 15px/1 FontAwesome;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
-        vertical-align: text-top;
-        line-height: 0.8; }
+        vertical-align: middle;
+        line-height: 0.9; }
     .footer-site .footer-top .social-item {
       width: 24px;
       height: 24px;
