@@ -39,7 +39,9 @@
     }
     .menu-header {
         flex-grow: 1;
-        margin-right: 113px;
+        @include respond-to($lg) {
+            margin-right: 113px;
+        }
     }
     .btn-burger {
         @include respond-to($lg) {
@@ -57,12 +59,13 @@
         .btn {
             font-size: 12px;
             margin-left: 10px;
-            &:first-child{
-                margin-left: 0;
-            }
+
             @include respond-to($sm) {
                 font-size: 16px;
                 margin: 0 0 0 27px;
+                &:first-child{
+                    margin-left: 0;
+                }
             }
         }
     }
