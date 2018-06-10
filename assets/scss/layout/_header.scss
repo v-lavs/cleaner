@@ -38,8 +38,8 @@
         height: auto;
     }
     .menu-header {
-        width: 100%;
-        max-width: 463px;
+        flex-grow: 1;
+        margin-right: 113px;
     }
     .btn-burger {
         @include respond-to($lg) {
@@ -57,7 +57,7 @@
         .btn {
             font-size: 12px;
             margin-left: 10px;
-            &:last-child{
+            &:first-child{
                 margin-left: 0;
             }
             @include respond-to($sm) {

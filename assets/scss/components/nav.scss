@@ -3,22 +3,20 @@
     margin: 0;
     @include respond-to($lg) {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
     .menu-item {
         color: $gray-900;
         border-bottom: 1px solid $gray-900;
         text-align: right;
-        margin-right: 30px;
         &:last-child {
             border: none;
         }
         @include respond-to($lg) {
             display: inline-block;
             border: none;
-            &:last-child {
-                margin-right: 0;
-            }
+            margin-left: 105px;
         }
         a {
             display: block;
